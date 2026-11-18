@@ -147,8 +147,8 @@ For anything this adapter does not wrap, `session._inner.sandbox` is the [Mariti
 | Package | Versions |
 | --- | --- |
 | Python | 3.10 to 3.13 |
-| `openai-agents` | 0.24.x |
-| `maritime` | 0.11.x |
+| `openai-agents` | 0.24.x and 0.25.x |
+| `maritime` | 0.11.x and 0.12.x |
 
 The SDK's sandbox interfaces are new and change between minor versions, so this package pins the range it is tested on.
 
