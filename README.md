@@ -119,9 +119,10 @@ You can also own the session yourself and use it across several runs:
 ```python
 client = MaritimeSandboxClient()
 session = await client.create(options=MaritimeSandboxClientOptions())
+run_config = RunConfig(sandbox=SandboxRunConfig(session=session))
 async with session:
-    await Runner.run(agent, "Clone the repo and install it.", run_config=RunConfig(sandbox=SandboxRunConfig(session=session)))
-    await Runner.run(agent, "Now run the tests.", run_config=RunConfig(sandbox=SandboxRunConfig(session=session)))
+    await Runner.run(agent, "Clone the repo and install it.", run_config=run_config)
+    await Runner.run(agent, "Now run the tests.", run_config=run_config)
 await client.delete(session)
 ```
 
